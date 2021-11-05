@@ -43,8 +43,8 @@
 
                 // Since phones are narrower than they are long, 
                 // double the increase to the x velocity
-                vx = vx + leftToRight_degrees * updateRate*2; 
-                vy = vy + frontToBack_degrees * updateRate;
+                vx = vx + leftToRight_degrees * updateRate; 
+                vy = vy + frontToBack_degrees * updateRate*.5;
                 
                 // velocity affect is halved for smoothing
                 px = px + vx*.5;
