@@ -61,6 +61,8 @@
                 dot = document.getElementsByClassName("indicatorDot")[0]
                 dot.setAttribute('style', "left:" + (px) + "%;" +
                               "top:" + (py) + "%;");
+
+                document.getElementById("f2b").innerHTML = frontToBack_degrees;
              });
           }
         });
@@ -72,5 +74,6 @@
             <h1>Get Accelerometer Permissions</h1>
         </button>
         <div class="indicatorDot" style="left:30%; top:30%;"></div>
+        <p id="f2b">Nothing yet</p>
     </body>
 </html>
