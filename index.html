@@ -30,9 +30,14 @@
              // Add a listener to get smartphone acceleration 
             // in the XYZ axes (units in m/s^2)
             //how else can we access this "event"?
-            window.addEventListener('devicemotion', (event) => {
-                console.log(event);
-                rotation_degrees = event.alpha;
+            //window.addEventListener('devicemotion', (event) => {
+                
+            //});
+
+            // Add a listener to get smartphone orientation 
+           // in the alpha-beta-gamma axes (units in degrees)
+             window.addEventListener('deviceorientation',(event) => {
+                 rotation_degrees = event.alpha;
                 frontToBack_degrees = event.beta;
                 leftToRight_degrees = event.gamma;
 
@@ -56,18 +61,10 @@
                 dot = document.getElementsByClassName("indicatorDot")[0]
                 dot.setAttribute('style', "left:" + (px) + "%;" +
                               "top:" + (py) + "%;");
-            });
-
-            // Add a listener to get smartphone orientation 
-           // in the alpha-beta-gamma axes (units in degrees)
-            window.addEventListener('deviceorientation',(event) => {
-                console.log(event);
-            });
+             });
           }
         });
       }
-
-
     </script>
     </head>
     <body style="background-color:lightblue;">
