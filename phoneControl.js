@@ -37,7 +37,7 @@ DeviceMotionEvent.requestPermission().then(response => {
          rotation_degrees = event.alpha;
         frontToBack_degrees = event.beta;
         leftToRight_degrees = event.gamma;
-        pwmVal=Math.round( leftToRight_degrees)+90;
+        pwmVal=Math.round(leftToRight_degrees+90);
 
         // Since phones are narrower than they are long, 
         // double the increase to the x velocity
