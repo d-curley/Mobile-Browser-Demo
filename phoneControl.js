@@ -37,6 +37,7 @@ DeviceMotionEvent.requestPermission().then(response => {
          rotation_degrees = event.alpha;
         frontToBack_degrees = event.beta;
         leftToRight_degrees = event.gamma;
+        pwm=leftToRight_degrees+90;
 
         // Since phones are narrower than they are long, 
         // double the increase to the x velocity
@@ -60,9 +61,9 @@ DeviceMotionEvent.requestPermission().then(response => {
                       "top:" + (py) + "%;");
 
         //document.getElementById("f2b").innerHTML = (Math.round( frontToBack_degrees* 100) / 100).toString();
-        document.getElementById("l2r").innerHTML = leftToRight_degrees/2;//(Math.round( leftToRight_degrees* 100) / 100).toString();
+        document.getElementById("l2r").innerHTML = pwm;//(Math.round( leftToRight_degrees* 100) / 100).toString();
      
-        rpio.pwmSetData(pin,leftToRight_degrees/2);
+        rpio.pwmSetData(pin,pwm);
     
     
     
