@@ -44,10 +44,10 @@ DeviceMotionEvent.requestPermission().then(response => {
         // dot.setAttribute('style', "left:" + (px) + "%;" +
         //               "top:" + (py) + "%;");
 
-        document.getElementById("f2b").innerHTML = "checkcheck";//(Math.round( frontToBack_degrees* 100) / 100).toString();
+        document.getElementById("f2b").innerHTML = "checkcheck1";//(Math.round( frontToBack_degrees* 100) / 100).toString();
 
-        pixelVal=    (leftToRight_degree -50)/10;    
-        document.getElementById("l2r").innerHTML = pixelVal;
+        pixelVal= (leftToRight_degree -50)/10;    
+        document.getElementById("l2r").innerHTML = pixelVal.toString();
       
     });
   }
