@@ -10,6 +10,7 @@ function getAccel(){
         if (response == 'granted') {
        // Add a listener to get smartphone orientation 
            // in the alpha-beta-gamma axes (units in degrees)
+           document.getElementById("f2b").innerHTML = "checkrepublic";//(Math.round( frontToBack_degrees* 100) / 100).toString();
             window.addEventListener('deviceorientation',(event) => {
                 // Expose each orientation angle in a more readable way
                 rotation_degrees = event.alpha;
@@ -37,6 +38,8 @@ function getAccel(){
                 dot = document.getElementsByClassName("indicatorDot")[0]
                 dot.setAttribute('style', "left:" + (px) + "%;" +
                                               "top:" + (py) + "%;");
+                pixelVal= (Math.round(leftToRight_degree) -50)/10;    
+                document.getElementById("l2r").innerHTML = pixelVal;
                 
             });
         }
