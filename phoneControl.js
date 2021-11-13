@@ -37,9 +37,10 @@ function getAccel(){
                 dot = document.getElementsByClassName("indicatorDot")[0]
                 dot.setAttribute('style', "left:" + (px) + "%;" +
                                               "top:" + (py) + "%;");
-                //var pixelVal= (Math.round(leftToRight_degree) -50)/10;    
+                //var pixelVal= (Math.round(leftToRight_degree) -50)/10;  
+                document.getElementById("f2b").innerHTML = (Math.round( leftToRight_degrees* 100) / 100).toString();  
                 document.getElementById("l2r").innerHTML = (Math.round( leftToRight_degrees* 100) / 100).toString();
-                document.getElementById("f2b").innerHTML = (Math.round( frontToBack_degrees* 100) / 100).toString();
+                
                 
             });
         }
