@@ -40,14 +40,14 @@ DeviceMotionEvent.requestPermission().then(response => {
             vy = 0;
         }
 
-        dot = document.getElementsByClassName("indicatorDot")[0]
-        dot.setAttribute('style', "left:" + (px) + "%;" +
-                      "top:" + (py) + "%;");
+        // dot = document.getElementsByClassName("indicatorDot")[0]
+        // dot.setAttribute('style', "left:" + (px) + "%;" +
+        //               "top:" + (py) + "%;");
 
         document.getElementById("f2b").innerHTML = "checkcheck";//(Math.round( frontToBack_degrees* 100) / 100).toString();
 
-        //pixelVal=    (leftToRight_degree -50)/10;    
-        //document.getElementById("l2r").innerHTML = pixelVal;
+        pixelVal=    (leftToRight_degree -50)/10;    
+        document.getElementById("l2r").innerHTML = pixelVal;
       
     });
   }
