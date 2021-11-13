@@ -14,7 +14,7 @@ function getAccel(){
                 // Expose each orientation angle in a more readable way
                 rotation_degrees = event.alpha;
                 frontToBack_degrees = event.beta;
-                leftToRight_degrees = event.gamma -50;
+                leftToRight_degrees = event.gamma;
                 
                 // Update velocity according to how tilted the phone is
                 // Since phones are narrower than they are long, double the increase to the x velocity
@@ -38,8 +38,8 @@ function getAccel(){
                 dot.setAttribute('style', "left:" + (px) + "%;" +
                                               "top:" + (py) + "%;");
                 //var pixelVal= (Math.round(leftToRight_degree) -50)/10;  
-                document.getElementById("f2b").innerHTML = (Math.round( leftToRight_degrees* 100) / 100).toString();  
-                document.getElementById("l2r").innerHTML = (Math.round( leftToRight_degrees* 100) / 100).toString();
+                document.getElementById("f2b").innerHTML = (Math.round( frontToBack_degrees* 100) / 100).toString();  
+                document.getElementById("l2r").innerHTML = (Math.round( (leftToRight_degrees-50)/10)).toString();
                 
                 
             });
