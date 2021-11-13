@@ -37,8 +37,8 @@ function getAccel(){
                 dot = document.getElementsByClassName("indicatorDot")[0]
                 dot.setAttribute('style', "left:" + (px) + "%;" +
                                               "top:" + (py) + "%;");
-                //pixelVal= (Math.round(leftToRight_degree) -50)/10;    
-                //document.getElementById("l2r").innerHTML = pixelVal;
+                pixelVal= (Math.round(leftToRight_degree) -50)/10;    
+                document.getElementById("l2r").innerHTML = pixelVal.toString();
                 document.getElementById("f2b").innerHTML = (Math.round( frontToBack_degrees* 100) / 100).toString();
                 
             });
