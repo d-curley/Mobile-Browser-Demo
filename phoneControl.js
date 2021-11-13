@@ -47,7 +47,7 @@ DeviceMotionEvent.requestPermission().then(response => {
 
         
 
-        pixelVal= (leftToRight_degree -50)/10;    
+        pixelVal= (Math.round(leftToRight_degree) -50)/10;    
         document.getElementById("l2r").innerHTML = pixelVal.toString();
       
     });
