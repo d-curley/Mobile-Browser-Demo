@@ -46,21 +46,19 @@ DeviceMotionEvent.requestPermission().then(response => {
 
         document.getElementById("f2b").innerHTML = "checkcheck";//(Math.round( frontToBack_degrees* 100) / 100).toString();
 
-        pixelVal=    (leftToRight_degree -50)/10;    
-        document.getElementById("l2r").innerHTML = pixelVal;
-        
-        //can use 
-        //pixelSend(val);
+        //pixelVal=    (leftToRight_degree -50)/10;    
+        //document.getElementById("l2r").innerHTML = pixelVal;
+      
     });
   }
 });
 }
 
-function pixelSend(val){
-  var xhr = new XMLHttpRequest();
-        xhr.open("POST", "/data", true);
-        xhr.setRequestHeader('Content-Type', 'application/json');
-        xhr.send(JSON.stringify({
-            value: val
-        }));
-}
+// function pixelSend(val){
+//   var xhr = new XMLHttpRequest();
+//         xhr.open("POST", "/data", true);
+//         xhr.setRequestHeader('Content-Type', 'application/json');
+//         xhr.send(JSON.stringify({
+//             value: val
+//         }));
+// }
