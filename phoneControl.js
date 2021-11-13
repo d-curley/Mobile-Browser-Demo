@@ -5,7 +5,7 @@ var vy = 0.0;
 var updateRate = 1/60; // Sensor refresh rate
 
 function getAccel(){
-  document.getElementById("f2b").innerHTML = "checkcheck1";//(Math.round( frontToBack_degrees* 100) / 100).toString();
+  document.getElementById("f2b").innerHTML = "checkcheck2";//(Math.round( frontToBack_degrees* 100) / 100).toString();
 DeviceMotionEvent.requestPermission().then(response => {
   if (response == 'granted') {
       console.log("accelerometer permission granted");
@@ -47,7 +47,7 @@ DeviceMotionEvent.requestPermission().then(response => {
 
         
 
-        pixelVal= 69;//(leftToRight_degree -50)/10;    
+        pixelVal= (leftToRight_degree -50)/10;    
         document.getElementById("l2r").innerHTML = pixelVal.toString();
       
     });
